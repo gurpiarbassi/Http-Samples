@@ -14,7 +14,9 @@
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>1.8.0</mockito.version>
+		<contiperf.version>2.3.4</contiperf.version>
 	</properties>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -93,6 +95,12 @@
 			<artifactId>mockito-all</artifactId>
 			<version>${mockito.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.databene</groupId>
+			<artifactId>contiperf</artifactId>
+			<version>${contiperf.version}</version>
 		</dependency>
 
 	</dependencies>

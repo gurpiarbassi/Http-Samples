@@ -86,7 +86,7 @@ public class Servlet extends HttpServlet {
 
 		LOGGER.info("writing to file path {}", targetFilePath);
 
-		synchronized (fileLock) {
+		//synchronized (fileLock) {
 			// The servlet will be single instance. Multiple requests can try writing to the same file so we need to synchronize.
 			try (Writer w = new BufferedWriter(new FileWriter(targetFilePath, true))) {
 				final String mapAsString = convertToString(requestParams, lineSeparator());
@@ -98,6 +98,6 @@ public class Servlet extends HttpServlet {
 														 .toString();
 				w.write(result);
 			}
-		}
+		//}
 	}
 }
